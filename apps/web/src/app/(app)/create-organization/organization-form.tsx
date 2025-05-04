@@ -28,15 +28,15 @@ export function OrganizationForm() {
         </Alert>
       )}
 
-      {/* {success === true && message && ( */}
-      <Alert variant="success">
-        <AlertTriangle className="size-4" />
-        <AlertTitle>Success!</AlertTitle>
-        <AlertDescription>
-          <p>Mensagem de sucesso</p>
-        </AlertDescription>
-      </Alert>
-      {/* )} */}
+      {success === true && message && (
+        <Alert variant="success">
+          <AlertTriangle className="size-4" />
+          <AlertTitle>Success!</AlertTitle>
+          <AlertDescription>
+            <p>{message}</p>
+          </AlertDescription>
+        </Alert>
+      )}
 
       <div className="space-y-1">
         <Label htmlFor="name">Organization name</Label>
@@ -75,10 +75,10 @@ export function OrganizationForm() {
             />
           </div>
           <label htmlFor="shouldAttachUsersByDomain" className="space-y-1">
-            <span className="text-sm leading-none font-medium">
+            <span className="text-sm font-medium leading-none">
               Auto-join new members
             </span>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm text-muted-foreground">
               This will automatically invite all members with same e-mail domain
               to this organization.
             </p>
