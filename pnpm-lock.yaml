@@ -108,6 +108,9 @@ importers:
       '@saas/env':
         specifier: workspace:*
         version: link:../../packages/env
+      '@tanstack/react-query':
+        specifier: ^5.75.4
+        version: 5.75.4(react@19.1.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1183,6 +1186,14 @@ packages:
 
   '@tailwindcss/postcss@4.1.4':
     resolution: {integrity: sha512-bjV6sqycCEa+AQSt2Kr7wpGF1bOZJ5wsqnLEkqSbM/JEHxx/yhMH8wHmdkPyApF9xhHeMSwnnkDUUMMM/hYnXw==}
+
+  '@tanstack/query-core@5.75.4':
+    resolution: {integrity: sha512-pcqOUgWG9oGlzkfRQQMMsEFmtQu0wq81A414CtELZGq+ztVwSTAaoB3AZRAXQJs88LmNMk2YpUKuQbrvzNDyRg==}
+
+  '@tanstack/react-query@5.75.4':
+    resolution: {integrity: sha512-Vf65pzYRkf8fk9SP1ncIZjvaXszBhtsvpf+h45Y/9kOywOrVZfBGUpCdffdsVzbmBzmz6TCFes9bM0d3pRrIsA==}
+    peerDependencies:
+      react: ^18 || ^19
 
   '@types/bcryptjs@3.0.0':
     resolution: {integrity: sha512-WRZOuCuaz8UcZZE4R5HXTco2goQSI2XxjGY3hbM/xDvwmqFWd4ivooImsMx65OKM6CtNKbnZ5YL+YwAwK7c1dg==}
@@ -3884,6 +3895,13 @@ snapshots:
       '@tailwindcss/oxide': 4.1.4
       postcss: 8.5.3
       tailwindcss: 4.1.4
+
+  '@tanstack/query-core@5.75.4': {}
+
+  '@tanstack/react-query@5.75.4(react@19.1.0)':
+    dependencies:
+      '@tanstack/query-core': 5.75.4
+      react: 19.1.0
 
   '@types/bcryptjs@3.0.0':
     dependencies:
