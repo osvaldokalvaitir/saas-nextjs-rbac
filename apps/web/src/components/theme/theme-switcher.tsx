@@ -2,6 +2,7 @@
 
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 import { Button } from '../ui/button'
 import {
@@ -12,14 +13,23 @@ import {
 } from '../ui/dropdown-menu'
 
 export function ThemeSwitcher() {
-  const { setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Sun className="size-4 dark:invisible dark:size-0" />
-          <Moon className="invisible size-0 dark:visible dark:size-4" />
+          {mounted &&
+            (resolvedTheme === 'dark' ? (
+              <Moon className="size-4" />
+            ) : (
+              <Sun className="size-4" />
+            ))}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
