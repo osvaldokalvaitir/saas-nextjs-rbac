@@ -10,7 +10,7 @@ export default function CreateProject() {
           <SheetTitle>Create project</SheetTitle>
         </SheetHeader>
 
-        <div className="py-4">
+        <div className="px-4">
           <ProjectForm />
         </div>
       </InterceptedSheetContent>
