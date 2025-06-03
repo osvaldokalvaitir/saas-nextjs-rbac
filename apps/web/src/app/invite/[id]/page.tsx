@@ -14,7 +14,7 @@ import { getInvite } from '@/http/get-invite'
 
 dayjs.extend(relativeTime)
 
-interface InvitePageProps {
+type InvitePageProps = {
   params: {
     id: string
   }
