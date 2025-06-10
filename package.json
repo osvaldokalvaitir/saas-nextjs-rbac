@@ -1,5 +1,5 @@
 {
-  "name": "next-saas-rbac",
+  "name": "saas-nextjs-rbac",
   "private": true,
   "scripts": {
     "build": "turbo run build",
